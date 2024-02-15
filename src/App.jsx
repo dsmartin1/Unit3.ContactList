@@ -1,16 +1,18 @@
-import { useState } from 'react'
-import './App.css'
+/* eslint-disable react/prop-types */
+
+import { useState } from "react";
+import ContactList from "./components/ContactList";
+import contactRow from "./components/ContactRow";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  //const [count, setCount] = useState(0)
 
   return (
     <>
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <ContactList />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
