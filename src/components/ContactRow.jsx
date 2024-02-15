@@ -1,13 +1,14 @@
 /* eslint-disable react/prop-types */
 
-export default function contactRow() {
+export default function contactRow({ contacts }) {
+  console.log(contacts);
   return (
     <tr>
-      <td>contact.name</td>
+      <td>{contacts.name}</td>
 
-      <td>contact.email</td>
+      <td>{contacts.email}</td>
 
-      <td>contact.phone</td>
+      <td>{contacts.phone}</td>
     </tr>
   );
 }
