@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import './App.css'
 import { useState } from 'react';
 import ContactList from './components/ContactList'
@@ -9,7 +10,7 @@ function App() {
   return (
     <>
       {selectedContactId ? (
-        <div>Selected Contact View</div>
+        <SelectedContact selectedContactId={selectedContactId} setSelectedContactId={setSelectedContactId} />
       ) : (
         <ContactList setSelectedContactId={setSelectedContactId} />
       )}
@@ -17,4 +18,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

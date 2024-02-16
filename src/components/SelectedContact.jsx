@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 
-export default function SelectedContact({}) {
+export default function SelectedContact({ selectedContactId, setSelectedContactId }) {
   const [contact, setContact] = useState(null);
 
   useEffect(()=>{
@@ -22,12 +23,23 @@ export default function SelectedContact({}) {
 
     return (
       <div>
-        <p>{contact?.name}</p>
-        <p>{contact?.email}</p>
-        <p>{contact?.address}</p>
-        <p>{contact?.phone}</p>
-        <p>{contact?.website}</p>
-        <p>{contact?.company}</p>
+        <p>Name: {contact?.name}</p>
+        <p>Email: {contact?.email}</p>
+        <p>Address:{' '} 
+          {contact?.address?.street},{' '} 
+          {contact?.address?.suite},{' '}
+          {contact?.address?.city},{' '}
+          {contact?.address?.zipcode}
+        </p>
+        <p>Phone: {contact?.phone}</p>
+        <p>Website: {contact?.website}</p>
+        <p>Company: {contact?.company?.name}</p>
+        <button
+          onClick={() => {
+            setSelectedContactId(null);
+        }}>
+          Return
+        </button>
       </div>
     );
   }

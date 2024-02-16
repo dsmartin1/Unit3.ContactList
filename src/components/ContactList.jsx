@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react'
 import ContactRow from './ContactRow'
 
@@ -25,7 +26,7 @@ export default function ContactList( {setSelectedContactId} ) {
             }
           }
           fetchContacts();
-          console.log(contacts); //Doesn't always work because it executes faster than await fetch?
+          console.log(contacts);
     },[]);
 
   return ( 
@@ -37,12 +38,12 @@ export default function ContactList( {setSelectedContactId} ) {
           </thead>
           <tbody>
             <tr>
-              <td>Name</td>
-              <td>Email</td>
-              <td>Phone</td>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Phone</th>
             </tr>
             {contacts.map((contact) => {
-                return <ContactRow key={contact.id} contact={contact} />;
+                return <ContactRow setSelectedContactId={setSelectedContactId} key={contact.id} contact={contact} />;
                 })
             }
           </tbody>
