@@ -1,3 +1,4 @@
+contactworkshop
 /* eslint-disable react/prop-types */
 
 export default function contactRow({ setSelectedContactId, contact }) {
@@ -17,3 +18,4 @@ export default function contactRow({ setSelectedContactId, contact }) {
     </tr>
   );
 }
+
