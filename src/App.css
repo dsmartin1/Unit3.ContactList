@@ -40,3 +40,21 @@
 .read-the-docs {
   color: #888;
 }
+
+th {
+  font-size: xx-large;
+  text-decoration: underline;
+  padding: 50px;
+
+}
+
+.rowHeading {
+  font-size: larger;
+  font-weight: bold;
+  padding: 15px;
+}
+
+.contactRow:hover{
+  background-color: aquamarine;
+  color: black;
+}
