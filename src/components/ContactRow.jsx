@@ -1,16 +1,18 @@
 /* eslint-disable react/prop-types */
 
-export default function contactRow({ contacts }) {
-  console.log(contacts);
+export default function contactRow({ setSelectedContactId, contact }) {
+  console.log(contact);
   return (
-    <tr onClick = {() => {
-        setSelectedContactId(contact.id);
-    }}>
-      <td>{contacts.name}</td>
+    <tr
+      onClick={() => {
+        setSelectedContactId(contact?.id);
+      }}
+    >
+      <td>{contact?.name}</td>
 
-      <td>{contacts.email}</td>
+      <td>{contact?.email}</td>
 
-      <td>{contacts.phone}</td>
+      <td>{contact?.phone}</td>
     </tr>
   );
 }
