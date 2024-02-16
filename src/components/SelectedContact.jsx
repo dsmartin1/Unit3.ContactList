@@ -27,12 +27,12 @@ export default function SelectedContact({
   return (
     <div>
       <h2>{contact?.name}</h2>
-      <p>{contact?.username}</p>
-      <p>{contact?.email}</p>
-      <p>{contact?.address?.street}</p>
-      <p>{contact?.phone}</p>
-      <p>{contact?.website}</p>
-      <p>{contact?.company?.name}</p>
+      <p>Username: {contact?.username}</p>
+      <p>Email: {contact?.email}</p>
+      <p>Address: {contact?.address?.street}</p>
+      <p>Phone: {contact?.phone}</p>
+      <p>Website: {contact?.website}</p>
+      <p>Company: {contact?.company?.name}</p>
       <button
         onClick={() => {
           setSelectedContactId(null);
